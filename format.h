@@ -90,10 +90,7 @@ struct format_spec__ {
 	}
 
 	const char* parse(const char* fmt, std::ostringstream& ss) {
-		if (fmt == nullptr) {
-			throw std::runtime_error("null pointer dereference");
-		}
-
+		assert(fmt != nullptr);
 		assert(*fmt == '{');	// how else did we get here?
 		fmt++;
 
