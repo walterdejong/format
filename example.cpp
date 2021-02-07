@@ -43,6 +43,12 @@ int main(int argc, char* argv[]) {
 	s = format("bool b: {}", b);
 	printf("%s\n", s.c_str());
 
+	s = format("left:   |{:<10}|", "left");
+	printf("%s\n", s.c_str());
+
+	s = format("right:  |{:>10}|", "right");
+	printf("%s\n", s.c_str());
+
 	s = format("center: |{:^10}|", "center");
 	printf("%s\n", s.c_str());
 
