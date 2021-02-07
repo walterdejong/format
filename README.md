@@ -36,7 +36,8 @@ Some simple examples of use;
     std::cout << format("center: |{:<30}|", "text") << std::endl;
 ```
 
-See `example.cpp` for a couple of more examples.
+As said, `format()` supports much more;
+see also `example.cpp` for a few more examples.
 
 
 Building
@@ -51,6 +52,11 @@ Namespacing
 For easiness of use, the `format()` function is not in a namespace.
 This is entirely on purpose; you can edit `format.h` to put it into
 a namespace if you want.
+
+
+Error handling
+--------------
+Invalid format strings will be met with an exception: `std::invalid_argument`.
 
 
 Copyright and licensing
