@@ -35,7 +35,7 @@ Some simple examples of use;
 
     std::cout << format("left-align: |{:<10}|", "text") << std::endl;
 
-    std::cout << format("center: |{:<30}|", "text") << std::endl;
+    std::cout << format("center: |{:^30}|", "text") << std::endl;
 ```
 
 As said, `format()` supports much more;
