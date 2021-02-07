@@ -27,7 +27,7 @@ THE SOFTWARE.
 */
 
 #ifndef FORMAT_H_WJ121
-#define FORMAT_H_WJ121 1
+#define FORMAT_H_WJ121	1
 
 #include <string>
 #include <sstream>
