@@ -5,12 +5,14 @@ format
 
 I know `std::format()` is in C++20, but this code works in C++11 and upwards.
 I also know about `libfmt`, which is a good production-quality project,
-but I just wanted to roll my own and see if I could do it.
-The result is a perfectly fine and usable `format()` function.
-It's only a single include file, and very easy to include in your own code.
+but I just wanted to roll my own and see if I could do it. At the least
+this code serves as an educational demonstration of how one would implement
+such a function. 
 
 This implementation of `format()` supports practically all the Python
-`format()` features documented for Python 3.9
+`format()` features documented for Python 3.9.
+It's only a single include file, and very light-weight to include
+in your own code.
 
 
 Example
