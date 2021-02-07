@@ -58,8 +58,17 @@ int main(int argc, char* argv[]) {
 
 	std::cout << format("{{ curly braces }}") << std::endl;
 
+#if 0
 	// this will throw std::invalid_argument
-//	std::cout << format("{", 1) << std::endl;
+	std::cout << format("{", 1) << std::endl;
+#endif
+
+#if 0
+	// nullptr produces a std::logic_error (for std::string)
+	char* p = nullptr;
+	std::cout << "nullptr: [" << format(nullptr) << "]" << std::endl;
+	std::cout << "nullptr, arg: [" << format(nullptr, 1) << std::endl;
+#endif
 
 	return 0;
 }
