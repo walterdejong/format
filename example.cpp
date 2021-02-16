@@ -7,10 +7,25 @@
 #include "format.h"
 
 #include <iostream>
+#include <ostream>
 #include <cstdio>
 
 using std::printf;
 
+// custom class can be format()ed with streaming operator<<
+class MyClass {
+	int a;
+
+public:
+	MyClass(int n) : a(n) { }
+
+	friend std::ostream& operator<<(std::ostream&, const MyClass&);
+};
+
+std::ostream& operator<<(std::ostream& os, const MyClass& c) {
+	os << "MyClass(" << c.a << ")";
+	return os;
+}
 
 int main(int argc, char* argv[]) {
 	printf("hello, world!\n");
@@ -57,6 +72,9 @@ int main(int argc, char* argv[]) {
 	std::cout << format("こんにちは{:c}{:c}", 0x4e16, 0x754c) << std::endl;
 
 	std::cout << format("{{ curly braces }}") << std::endl;
+
+	MyClass bar(42);
+	std::cout << format("{}", bar) << std::endl;
 
 #if 0
 	// this will throw std::invalid_argument
