@@ -46,7 +46,7 @@ Building
 --------
 Use a C++ compiler, for example:
 
-    clang++ -Wall -std=c++11 example.cpp -o example
+    clang++ -Wall -Wextra -std=c++11 example.cpp -o example
 
 
 Namespacing
