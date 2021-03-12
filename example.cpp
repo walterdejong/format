@@ -28,6 +28,9 @@ std::ostream& operator<<(std::ostream& os, const MyClass& c) {
 }
 
 int main(int argc, char* argv[]) {
+	(void)argc;		// unused
+	(void)argv;		// unused
+
 	printf("hello, world!\n");
 
 	std::string s = format("hello format({})", 42);

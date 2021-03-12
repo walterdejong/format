@@ -478,14 +478,16 @@ void sformat_center__(std::ostringstream& ss, const std::string& s, int width, c
 }
 
 template <typename T>
-void sformat_str__(std::ostringstream& ss, const format_spec__& _spec, const T& value) {
+void sformat_str__(std::ostringstream& ss, const format_spec__& spec, const T& value) {
+	(void)spec;		// unused
 	// default: use stream operator<<()
 	// stream flags were already set up according to spec
 	ss << value;
 }
 
 // format specific types
-void sformat_str__(std::ostringstream& ss, const format_spec__ _spec, const bool& value) {
+void sformat_str__(std::ostringstream& ss, const format_spec__ spec, const bool& value) {
+	(void)spec;		// unused
 	ss << (value ? "true" : "false");
 }
 
